@@ -6,7 +6,7 @@ import DonutChart from "./DonutChart";
 import PieChart from "./PieChart";
 const MainContent = () => {
   const [news, setNews] = useState([]);
-  const url = "//localhost:8000/api/news";
+  const url = "//easy-ruby-drill-wear.cyclic.app/api/news";
 
   useEffect(() => {
     axios.get(url).then((response) => {
@@ -15,11 +15,11 @@ const MainContent = () => {
     });
   }, [url]);
 
-  const countryUrl = "//localhost:8000/api/news/find/country";
-  const regionUrl = "//localhost:8000/api/news/find/region";
-  const topicUrl = "//localhost:8000/api/news/find/topic";
-  const sourceUrl = "//localhost:8000/api/news/find/source";
-  // const intensityUrl = "//localhost:8000/api/news/find/intensity";
+  const countryUrl = "//easy-ruby-drill-wear.cyclic.app/api/news/find/country";
+  const regionUrl = "//easy-ruby-drill-wear.cyclic.app/api/news/find/region";
+  const topicUrl = "//easy-ruby-drill-wear.cyclic.app/api/news/find/topic";
+  const sourceUrl = "//easy-ruby-drill-wear.cyclic.app/api/news/find/source";
+  // const intensityUrl = "//easy-ruby-drill-wear.cyclic.app/api/news/find/intensity";
 
   return (
     <div className="relative min-h-screen min-w-full w-full overflow-hidden">
