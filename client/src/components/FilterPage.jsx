@@ -11,7 +11,7 @@ const FilterPage = ({ filter }) => {
   const [news, setNews] = useState([]);
   const [datas, setDatas] = useState([]);
 
-  var mainUrl = `//localhost:8000/api/news/find/${filter}`;
+  var mainUrl = `//easy-ruby-drill-wear.cyclic.app/api/news/find/${filter}`;
   useEffect(() => {
     axios.get(mainUrl).then((response) => {
       setDatas(response.data);
@@ -23,7 +23,7 @@ const FilterPage = ({ filter }) => {
     e.preventDefault();
     if (state === "") return;
 
-    secondUrl = `//localhost:8000/api/news/find/${filter}/${state}`;
+    secondUrl = `//easy-ruby-drill-wear.cyclic.app/api/news/find/${filter}/${state}`;
     axios
       .get(secondUrl)
       .then((response) => {
@@ -41,14 +41,14 @@ const FilterPage = ({ filter }) => {
       <div className="grid grid-cols-1 xl:grid-cols-2 gap-3 w-full">
         {filter === "source" && news && news.length ? (
           <RadialChart
-            selectedUrl={`//localhost:8000/api/news/find/${filter}/${state}/relevance`}
+            selectedUrl={`//easy-ruby-drill-wear.cyclic.app/api/news/find/${filter}/${state}/relevance`}
             label={"Relevance"}
             title={state}
           />
         ) : null}
         {filter === "topic" && news && news.length ? (
           <RadialChart
-            selectedUrl={`//localhost:8000/api/news/find/${filter}/${state}/intensity`}
+            selectedUrl={`//easy-ruby-drill-wear.cyclic.app/api/news/find/${filter}/${state}/intensity`}
             label={"Intensity"}
             title={state}
           />
