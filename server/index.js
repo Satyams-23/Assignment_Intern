@@ -18,7 +18,7 @@ app.get("/", (req, res) => {
 });
 
 mongoose
-  .connect(process.env.MONGO_URL, {
+  .connect(`mongodb+srv://satyam212134111:Babul.45.bs@satyam01.dexkqcz.mongodb.net/`, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
