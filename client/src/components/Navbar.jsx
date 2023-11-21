@@ -58,6 +58,13 @@ const Navbar = () => {
             </div>
 
             <div className="border-b p-2 flex flex-col gap-1">
+                 <Link
+                onClick={handleNav}
+                to="/"
+                className="text-lg hover:bg-gray-200/40 rounded-lg p-2 text-gray-500"
+              >
+                Main Content
+              </Link>
               <Link
                 onClick={handleNav}
                 to="/table/country"
